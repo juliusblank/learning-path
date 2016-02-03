@@ -1,61 +1,17 @@
-
-
     3  curl https://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
     4  echo "deb https://packages.elastic.co/beats/apt stable main" |  sudo tee -a /etc/apt/sources.list.d/beats.list
     5  apt-get update
     6  apt-get install filebeat
-
-
-
-
-
-
-
    14  service filebeat start
-
-
    17  vim filebeat.yml
-
-
-
-
-
-
-
-
-
-
-
-
-
-   31  tail -f /var/log/auth.log 
-
-
    34  curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
-   35  ip a
-   36  ping 10.135.136.137
-   37  curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
-   38  vim /etc/filebeat/filebeat.template.json 
    39  apt-get install apache2
-
    41  apt-get install tomcat7
    42  vim /etc/default/tomcat7
    43  service tomcat7 restart
-
-
-
    47  apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
-   48  taiol -f
-   49  tail -f /var/log/tomcat7/catalina.out 
    50  vim /etc/tomcat7/tomcat-users.xml
-   51  service tomcat7 restart
-
    53  service tomcat7 restart
-   54  less /var/log/tomcat7/catalina.out 
-   55  service tomcat7 restart
-   56  less /var/log/tomcat7/catalina.out 
-   57  less /var/log/tomcat7/localhost.2016-01-12.log 
-   58  service tomcat7 restart
 
 
 
