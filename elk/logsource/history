@@ -1,14 +1,14 @@
-    3  curl https://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
-    4  echo "deb https://packages.elastic.co/beats/apt stable main" |  sudo tee -a /etc/apt/sources.list.d/beats.list
-    5  apt-get update
-    6  apt-get install filebeat
-   14  service filebeat start
-   17  vim filebeat.yml
-   34  curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
-   39  apt-get install apache2
-   41  apt-get install tomcat7
-   42  vim /etc/default/tomcat7
-   43  service tomcat7 restart
-   47  apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
-   50  vim /etc/tomcat7/tomcat-users.xml
-   53  service tomcat7 restart
+curl https://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
+echo "deb https://packages.elastic.co/beats/apt stable main" |  sudo tee -a /etc/apt/sources.list.d/beats.list
+apt-get update
+apt-get install filebeat
+service filebeat start
+vim filebeat.yml
+curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
+apt-get install apache2
+apt-get install tomcat7
+vim /etc/default/tomcat7
+service tomcat7 restart
+apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
+vim /etc/tomcat7/tomcat-users.xml
+service tomcat7 restart
