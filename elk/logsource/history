@@ -1,0 +1,135 @@
+    1  exit
+    2  clear
+    3  curl https://packages.elasticsearch.org/GPG-KEY-elasticsearch | sudo apt-key add -
+    4  echo "deb https://packages.elastic.co/beats/apt stable main" |  sudo tee -a /etc/apt/sources.list.d/beats.list
+    5  apt-get update
+    6  apt-get install filebeat
+    7  clear
+    8  cd /etc/filebeat/
+    9  ll
+   10  vim filebeat.yml 
+   11  mv filebeat.yml filebeat.yml.bak
+   12  vim filebeat.yml
+   13  ll /var/log/
+   14  service filebeat start
+   15  vim filebeat.yml
+   16  vim filebeat.yml.bak 
+   17  vim filebeat.yml
+   18  service filebeat start
+   19  ll /var/log/filebeat/
+   20  service filebeat status
+   21  mv filebeat.yml  filebeat.julius
+   22  mv filebeat.yml.bak filebeat.yml
+   23  vim filebeat.yml 
+   24  service filebeat status
+   25  service filebeat restart
+   26  ll /var/log/filebeat/
+   27  ll /var/log/
+   28  vim filebeat.yml 
+   29  date
+   30  ll /var/log/
+   31  tail -f /var/log/auth.log 
+   32  ll /var/log/
+   33  ll /var/log/filebeat/
+   34  curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
+   35  ip a
+   36  ping 10.135.136.137
+   37  curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
+   38  vim /etc/filebeat/filebeat.template.json 
+   39  apt-get install apache2
+   40  vim filebeat.yml 
+   41  apt-get install tomcat7
+   42  vim /etc/default/tomcat7
+   43  service tomcat7 restart
+   44  vim filebeat.yml 
+   45  service filebeat restart#
+   46  service filebeat restart
+   47  apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
+   48  taiol -f
+   49  tail -f /var/log/tomcat7/catalina.out 
+   50  vim /etc/tomcat7/tomcat-users.xml
+   51  service tomcat7 restart
+   52  vim filebeat.yml 
+   53  service tomcat7 restart
+   54  less /var/log/tomcat7/catalina.out 
+   55  service tomcat7 restart
+   56  less /var/log/tomcat7/catalina.out 
+   57  less /var/log/tomcat7/localhost.2016-01-12.log 
+   58  service tomcat7 restart
+   59  exit
+   60  df -h
+   61  history 
+   62  git
+   63  apt-get install git
+   64  ll
+   65  mkdir   workspace
+   66  cd workspace/
+   67  ll
+   68  git clone https://github.com/juliusblank/learning-path.git
+   69  cd 
+   70  cd -
+   71  cd learning-path/
+   72  mkdir nomad
+   73  cd nomad/
+   74  ..
+   75  cd ..
+   76  mkdir elk
+   77  cd elk
+   78  ll
+   79  mkdir logsource
+   80  cp ../README.md .
+   81  vim README.md 
+   82  git add --all
+   83  cd ..
+   84  git status
+   85  git commit -m "init elk"
+   86  git config --global user.name "juliusblank"
+   87  git commit -m "init elk"
+   88  git push origin master 
+   89  ll ~/.ssh/
+   90  cd ..
+   91  ll
+   92  rm -fr learning-path/
+   93  git clone git@github.com:juliusblank/learning-path.git
+   94  ssh-keygen -t rsa
+   95  ll
+   96  mv github* ~/.ssh/
+   97  cat ~/.ssh/github.pub 
+   98  git clone git@github.com:juliusblank/learning-path.git
+   99  agent
+  100  env
+  101  git status
+  102  git clone git@github.com:juliusblank/learning-path.git
+  103  ssh-agent bash -c 'ssh-add /root/.ssh/github; git clone git@github.com:juliusblank/learning-path.git' 
+  104  ll
+  105  cd learning-path/
+  106  ll
+  107  mkdir elk
+  108  cd elk/
+  109  cp ../README.md .
+  110  vim README.md 
+  111  cd ..
+  112  git add --all
+  113  git status
+  114  git commit -m "init elk"
+  115  git push origin master 
+  116  ssh-add /root/.ssh/github
+  117  #ssh-agent bash -c 'ssh-add /root/.ssh/github; ' 
+  118  man ssh-agent 
+  119  man ssh-add 
+  120  ssh-add /root/.ssh/github
+  121  ssh-add
+  122  sudo ssh-add
+  123  eval `ssh-agent -s`
+  124  ssh-add /root/.ssh/github
+  125  git push origin master 
+  126  cd 
+  127  cd -
+  128  cd elk/
+  129  ll
+  130  mkdir logsource
+  131  mkdir elk
+  132  cd logsource/
+  133  history 
+  134  ll
+  135  history > history
