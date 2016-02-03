@@ -5,7 +5,7 @@
     5  apt-get update
     6  apt-get install filebeat
 
-    8  cd /etc/filebeat/
+
 
 
 
@@ -15,17 +15,17 @@
 
 
    17  vim filebeat.yml
-   18  service filebeat start
-
-   20  service filebeat status
-   21  mv filebeat.yml  filebeat.julius
-   22  mv filebeat.yml.bak filebeat.yml
-   23  vim filebeat.yml 
-   24  service filebeat status
-   25  service filebeat restart
 
 
-   28  vim filebeat.yml 
+
+
+
+
+
+
+
+
+
 
 
    31  tail -f /var/log/auth.log 
@@ -37,19 +37,19 @@
    37  curl -XPUT 'http://10.135.136.137:9200/_template/filebeat?pretty' -d@/etc/filebeat/filebeat.template.json
    38  vim /etc/filebeat/filebeat.template.json 
    39  apt-get install apache2
-   40  vim filebeat.yml 
+
    41  apt-get install tomcat7
    42  vim /etc/default/tomcat7
    43  service tomcat7 restart
-   44  vim filebeat.yml 
-   45  service filebeat restart#
-   46  service filebeat restart
+
+
+
    47  apt-get install tomcat7-docs tomcat7-admin tomcat7-examples
    48  taiol -f
    49  tail -f /var/log/tomcat7/catalina.out 
    50  vim /etc/tomcat7/tomcat-users.xml
    51  service tomcat7 restart
-   52  vim filebeat.yml 
+
    53  service tomcat7 restart
    54  less /var/log/tomcat7/catalina.out 
    55  service tomcat7 restart
